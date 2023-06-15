@@ -1,0 +1,12 @@
+diff --git a/node_modules/prettier-eslint/dist/utils.js b/node_modules/prettier-eslint/dist/utils.js
+index 200cf71..6caaba2 100644
+--- a/node_modules/prettier-eslint/dist/utils.js
++++ b/node_modules/prettier-eslint/dist/utils.js
+@@ -383,6 +383,7 @@ function getESLint(eslintPath, eslintOptions) {
+   } = requireModule(eslintPath, 'eslint');
+ 
+   try {
++    eslintOptions.reportUnusedDisableDirectives = null
+     return new ESLint(eslintOptions);
+   } catch (error) {
+     logger.error('There was trouble creating the ESLint CLIEngine.');
